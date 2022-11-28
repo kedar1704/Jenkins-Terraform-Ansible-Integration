@@ -6,6 +6,5 @@ resource "aws_instance" "dev_machine" {
 
   tags = {
     Environment = "dev"
-    Name = "TF-server"
   }
 }
