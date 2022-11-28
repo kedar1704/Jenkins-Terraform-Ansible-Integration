@@ -1,0 +1,14 @@
+- name: This sets up an httpd webserver
+  hosts: aws_ec2
+  become: yes
+  tasks:
+  - name: "Install httpd and php packages"
+    package:
+        name:
+          - "httpd"
+          - "php"
+        state: present
+  - name: "Start httpd services"
+    service:
+        name: httpd
+        state: started
