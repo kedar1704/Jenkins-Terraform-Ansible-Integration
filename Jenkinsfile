@@ -26,7 +26,7 @@ pipeline {
       
       stage("Terraform Plan"){
         steps{
-               sh label: '', script: 'terraform plan'
+               sh label: '', script: 'terraform plan -lock=false'
 
              }
 	     }
@@ -34,7 +34,7 @@ pipeline {
       stage ("terraform Action") {
             steps {
                 echo "Terraform action is --> ${action}"
-                sh label: '', script: 'terraform ${action} --auto-approve' 
+                sh label: '', script: 'terraform ${action} -lock=false --auto-approve' 
            }
         }
       
