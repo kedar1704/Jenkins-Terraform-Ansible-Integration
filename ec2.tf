@@ -1,10 +1,10 @@
 resource "aws_instance" "dev_machine" {
-  ami = data.aws_ami.amazon-linux.id
+  ami = ami-094125af156557ca2
   instance_type = "t2.micro"
-  key_name = "euran-jenkins"
+  key_name = "EC2_Oregon"
 
   tags = {
     Environment = "dev"
-    Name = "${var.name}-server"
+    Name = "TF-server"
   }
 }
