@@ -17,7 +17,7 @@ pipeline {
           }
       }
       
-	    /*
+	    
       stage("Terraform Init"){
         steps{
                sh label: '', script: 'terraform init'
@@ -38,7 +38,7 @@ pipeline {
                 sh label: '', script: 'terraform ${action} -lock=false --auto-approve' 
            }
         }
-	*/
+	
 	    
       stage("ansible"){
   	    steps {
