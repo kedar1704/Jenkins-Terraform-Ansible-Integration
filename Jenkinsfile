@@ -43,7 +43,7 @@ pipeline {
       		ansiblePlaybook credentialsId: 'connection_ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'apache.yaml'
           		}
      		}
-      }
+      
       
     }
 }
