@@ -37,6 +37,13 @@ pipeline {
                 sh label: '', script: 'terraform ${action} -lock=false --auto-approve' 
            }
         }
+	    
+      stage("ansible"){
+  	    steps {
+      		ansiblePlaybook credentialsId: 'connection_ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'apache.yaml'
+          		}
+     		}
+      }
       
     }
 }
