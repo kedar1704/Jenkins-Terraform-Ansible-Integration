@@ -1,0 +1,2 @@
+[connection]
+10.0.1.134 ansible_user=ec2-user
